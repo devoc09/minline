@@ -1,7 +1,3 @@
-" This Source Code Form is subject to the terms of the Mozilla Public
-" License, v. 2.0. If a copy of the MPL was not distributed with this
-" file, You can obtain one at https://mozilla.org/MPL/2.0/.
-
 if exists('g:barow_plugin')
   finish
 endif
@@ -12,17 +8,17 @@ set cpo&vim
 
 let g:barowDefault = {
       \  'modes': {
-      \    'normal': [' ', 'BarowNormal'],
-      \    'insert': ['i', 'BarowInsert'],
-      \    'replace': ['r', 'BarowReplace'],
-      \    'visual': ['v', 'BarowVisual'],
-      \    'v-line': ['l', 'BarowVisual'],
-      \    'v-block': ['b', 'BarowVisual'],
-      \    'select': ['s', 'BarowVisual'],
-      \    'command': ['c', 'BarowCommand'],
+      \    'normal': ['N', 'BarowNormal'],
+      \    'insert': ['I', 'BarowInsert'],
+      \    'replace': ['R', 'BarowReplace'],
+      \    'visual': ['V', 'BarowVisual'],
+      \    'v-line': ['L', 'BarowVisual'],
+      \    'v-block': ['B', 'BarowVisual'],
+      \    'select': ['S', 'BarowVisual'],
+      \    'command': ['C', 'BarowCommand'],
       \    'shell-ex': ['!', 'BarowCommand'],
-      \    'terminal': ['t', 'BarowTerminal'],
-      \    'prompt': ['p', 'BarowNormal'],
+      \    'terminal': ['T', 'BarowTerminal'],
+      \    'prompt': ['P', 'BarowNormal'],
       \    'inactive': [' ', 'BarowModeNC']
       \  },
       \  'statusline': ['Barow', 'BarowNC'],
@@ -74,7 +70,7 @@ augroup END
 let s:p={
       \ 'null': ['NONE', 'NONE'],
       \ 'statusLine': ['#313335', 236],
-      \ 'statusLineFg': ['#BBBBBB', 250],
+      \ 'statusLineFg': ['#FF7700', 136],
       \ 'statusLineNC': ['#787878', 243],
       \ 'tabLineFg': ['#A9B7C6', 145],
       \ 'tabLineSel': ['#4E5254', 239],
@@ -82,6 +78,8 @@ let s:p={
       \ 'UIGreen': ['#499C54', 71],
       \ 'UIRed': ['#C75450', 131],
       \ 'UIBrown': ['#93896C', 102],
+      \ 'UIPurple': ['#7B00ED', 50],
+      \ 'UIPink': ['#F23FA2', 100],
       \ 'UIOrange': ['#BE9117', 136]
       \ }
 call barow#hi('Barow', s:p.statusLineFg, s:p.statusLine)
@@ -101,7 +99,7 @@ hi! link BarowLPercent Barow
 hi! link BarowLPercentNC BarowNC
 hi! link BarowRowCol Barow
 hi! link BarowRowColNC BarowNC
-call barow#hi('BarowNormal', s:p.statusLineFg, s:p.statusLine, 'bold')
+call barow#hi('BarowNormal', s:p.UIPink, s:p.statusLine, 'bold')
 call barow#hi('BarowInsert', s:p.UIGreen, s:p.statusLine, 'bold')
 call barow#hi('BarowReplace', s:p.UIRed, s:p.statusLine, 'bold')
 call barow#hi('BarowVisual', s:p.UIBlue, s:p.statusLine, 'bold')
