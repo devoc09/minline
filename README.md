@@ -1,6 +1,6 @@
-## MINLINE
+## MINLINE(development)
 
-![barow](./img/barow.png)
+![minline](./img/minline.png)
 
 A minimalist statusline for [n](https://neovim.io/)/[vim](https://www.vim.org/).
 
@@ -12,4 +12,4 @@ For example with [vim-plug](https://github.com/junegunn/vim-plug) add this in `.
 Plug 'devoc09/minline'
 ```
 
-Inspired by [doums/barow](https://github.com/doums/barow)
+Inspired and Forked by [doums/barow](https://github.com/doums/barow)
