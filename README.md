@@ -1,5 +1,8 @@
 ## MINLINE(development)
 
+### Warning
+this repo is under develop.
+
 ![minline](./img/minline.png)
 
 A minimalist statusline for [n](https://neovim.io/)/[vim](https://www.vim.org/).
